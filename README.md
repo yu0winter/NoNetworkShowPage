@@ -39,6 +39,17 @@ if (flag) {
 }
 }];
 
+7、页面上重新加载按钮的回调
+// click reloading button
+__weak HomePageVC * wself = self;
+_loadingFailPage.btnClick = ^(NSString * reloading){
+if ([reloading isEqualToString:@"re_loading"]) {
+    [wself getNetWorkingData];
+}
+};
+
+
+
 ```
 
 #### ~  此功能还能进一步的改进欢迎 Pull Requests、  如果觉得可以请点个Star~
